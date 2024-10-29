@@ -11,9 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  namespace :api do
-    namespace :v1 do
-      resources :todos, only: [:index, :create, :show, :update, :destroy]
-    end
+  resources :users do
+    resources :todos, only: [:index, :create, :update, :destroy]
+    resources :donations, only: [:index, :create]
   end
 end
