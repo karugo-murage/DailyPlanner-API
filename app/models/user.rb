@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_secure_password  # Adds methods to set and authenticate with bcrypt
+    # has_secure_password  # Adds methods to set and authenticate with bcrypt
   
     has_many :todos, dependent: :destroy
     has_many :donations, dependent: :destroy
